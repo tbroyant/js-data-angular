@@ -551,7 +551,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          }
 	          config.method = config.method.toUpperCase();
 	          if (typeof config.data === "object") {
-	            config.data = removeCircular(config.data);
+	            config.data = DSUtils.removeCircular(config.data);
 	          }
 	          var suffix = config.suffix || _this.defaults.suffix;
 	          if (suffix && config.url.substr(config.url.length - suffix.length) !== suffix) {

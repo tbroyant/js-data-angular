@@ -466,7 +466,7 @@ if (!httpLoaded) {
           }
           config.method = config.method.toUpperCase();
           if (typeof config.data === 'object') {
-            config.data = removeCircular(config.data);
+            config.data = DSUtils.removeCircular(config.data);
           }
           let suffix = config.suffix || _this.defaults.suffix;
           if (suffix && config.url.substr(config.url.length - suffix.length) !== suffix) {
